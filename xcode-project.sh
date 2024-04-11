@@ -18,3 +18,5 @@ cmake -G "Xcode" ${PROJECT_DIR} \
     -DBUILD_NUMBER=123
 
 cp "${PROJECT_DIR}/Podfile" "$PWD"
+
+pod install
