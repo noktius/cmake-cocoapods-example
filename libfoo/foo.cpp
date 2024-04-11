@@ -6,7 +6,7 @@ Foo::Foo(IBar& bar)
     :m_bar(bar) {};
 
 bool Foo::baz(bool useQux) {
-    std::cout << "DEBUG HERE is: " << useQux << std::endl;
+    std::cout << "libfoo library / baz function / useQux " << useQux << std::endl;
     if (useQux) {
         return m_bar.qux();
     } else {

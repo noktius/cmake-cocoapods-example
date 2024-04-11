@@ -21,9 +21,3 @@ cmake -G "Xcode" ${PROJECT_DIR} \
     -DSCENARIO_GIT_REVISION=1234 \
     -DGIT_REVISION=1234 \
     -DBUILD_NUMBER=123
-
-cp "${PROJECT_DIR}/Podfile" "$PWD"
-
-echo "Running cocoapods for Xcode..."
-
-pod install

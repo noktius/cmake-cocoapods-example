@@ -16,7 +16,7 @@ This code was tested in April 2024 with following specs:
 To facilitate effective debugging, it's recommended to create a new shadow build folder. This approach helps isolate build artifacts from the source directory, allowing for cleaner builds and easier problem identification.
 
 
-## Building
+## Building with CocoaPods
 
 ~~~
 mkdir cmake-build
@@ -31,6 +31,17 @@ This script configures and generates an Xcode project in the shadow build direct
 
 After building, proceed with these steps to run the project:
 
-1. Open the generated Xcode project in the cmake-build directory.
-2. Select the appropriate target for macOS.
+1. Open the generated Xcode Workspace ```myApp.xcworkspace``` project in the cmake-shadow-build directory.
+2. Select the ```myApp``` target for macOS.
 3. Hit the Run button to build and execute the project on your Mac.
+4. Expected Error: You should run into a compile error ```can't locate file for: -lPods-libfoo``` or something like ```can't locate .a file```. This is the anticipated issue we're demonstrating!
+
+
+## Try it without CocoaPods!
+
+~~~
+chmod +x /path/to/source/xcode-project-no-cocoapods.sh # Make the build script executable
+/path/to/source/xcode-project-no-cocoapods.sh # Execute the build script
+~~~
+
+After executing the script, rebuild the project in Xcode as described earlier. You'll notice that it compiles and runs flawlessly, showcasing the difference CocoaPods can make in the build process.
