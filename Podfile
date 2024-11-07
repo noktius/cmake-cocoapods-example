@@ -1,15 +1,5 @@
-require 'xcodeproj'
+platform :osx, '13.0'
 
-use_modular_headers!
+install! 'cocoapods', integrate_targets: false
 
-workspace "myApp"
-platform :ios, '13.0'
-project 'myProject.xcodeproj'
-
-target "libfoo" do
-    project "myProject"
-    inherit! :search_paths
-
-    pod 'GoogleMLKit/TextRecognition'
-    pod 'GoogleMLKit/BarcodeScanning'
-end
+pod 'Firebase'
