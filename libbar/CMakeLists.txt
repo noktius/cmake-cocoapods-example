@@ -1,6 +1,6 @@
 set(libbar_SRCS
     bar.h
-    bar.cpp
+    bar.mm
 )
 
 # Declare the library
